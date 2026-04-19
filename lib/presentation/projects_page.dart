@@ -36,7 +36,7 @@ class ProjectsPage extends StatelessWidget {
       icon: Icons.favorite,
       highlights: ['Corsi BLSD per la popolazione', 'Defibrillatori pubblici', 'Formazione nelle scuole', 'Campagne di sensibilizzazione'],
       status: 'Attivo',
-      imageUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
+      imageUrl: 'assets/images/medical_training.jpg',
     ),
     Project(
       id: 'nuova-ambulanza',
@@ -46,7 +46,7 @@ class ProjectsPage extends StatelessWidget {
       icon: Icons.local_hospital,
       highlights: ['Mezzo di soccorso avanzato', 'Dotazione completa', 'Sistema di navigazione integrato', 'Servizio H24'],
       status: 'Completato',
-      imageUrl: 'https://images.unsplash.com/photo-1538108149393-fbbd8181379a?w=800&q=80',
+      imageUrl: 'assets/images/hero_volunteers.jpg',
     ),
     Project(
       id: 'protezione-civile',
@@ -56,7 +56,7 @@ class ProjectsPage extends StatelessWidget {
       icon: Icons.shield,
       highlights: ['Risposta alle emergenze', 'Antincendio boschivo', 'Ricerca dispersi', 'Prevenzione e monitoraggio'],
       status: 'Attivo',
-      imageUrl: 'https://images.unsplash.com/photo-1551076805-e186903474e0?w=800&q=80',
+      imageUrl: 'assets/images/emergency_response.jpg',
     ),
     Project(
       id: 'trasporto-sociale',
@@ -66,7 +66,7 @@ class ProjectsPage extends StatelessWidget {
       icon: Icons.accessible,
       highlights: ['Convenzioni comunali', 'Trasporto dialisi', 'Accompagnamento visite', 'Servizio porta-porta'],
       status: 'Attivo',
-      imageUrl: 'https://images.unsplash.com/photo-1628595351029-c2bf1751145c?w=800&q=80',
+      imageUrl: 'assets/images/community_service.jpg',
     ),
     Project(
       id: 'formazione-volontari',
@@ -76,7 +76,7 @@ class ProjectsPage extends StatelessWidget {
       icon: Icons.school,
       highlights: ['Corso base volontari', 'Formazione BLSD', 'Aggiornamenti periodici', 'Esercitazioni pratiche'],
       status: 'Attivo',
-      imageUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+      imageUrl: 'assets/images/first_aid_training.jpg',
     ),
   ];
 
@@ -94,7 +94,7 @@ class ProjectsPage extends StatelessWidget {
                 width: double.infinity,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: NetworkImage('https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1600&q=80'),
+                    image: AssetImage('assets/images/community_team.jpg'),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -179,7 +179,7 @@ class _ProjectCard extends StatelessWidget {
                 borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
                 child: Stack(
                   children: [
-                    Image.network(
+                    Image.asset(
                       project.imageUrl,
                       height: 200,
                       width: double.infinity,
